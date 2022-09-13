@@ -1,0 +1,22 @@
+#main {
+    padding: 20px 20px;
+}
+
+#cryptoList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 3;
+    align-items: left;
+    gap: 12px;
+}
+
+.nomics-ticker-widget {
+    width: 800px;
+    height: 400px;
+    z-index: 999;
+}
+
+.addPairBtn {
+    margin-left: 10px;
+}

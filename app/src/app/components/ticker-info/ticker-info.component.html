@@ -1,0 +1,48 @@
+<ng-container *ngIf="response.symbol; else spinner">
+  <mat-card class="example-card">
+    <mat-card-title>{{ response.symbol }}</mat-card-title>
+    <mat-card-subtitle>{{ response.lastPrice | currency:'USD':'symbol-narrow':'.2-6' }}</mat-card-subtitle>
+    <mat-card-content>
+      <ul>
+        <li>
+          Price change 24h:
+          <b>{{ response.priceChangePercent / 100 | percent: ".2" }}</b>
+        </li>
+        <li>
+          Maxium price 24h: <b>{{ response.highPrice | currency:'USD':'symbol-narrow':'.2-6' }}</b>
+        </li>
+        <li>
+          Minium price 24h: <b>{{ response.lowPrice | currency:'USD':'symbol-narrow':'.2-6' }}</b>
+        </li>
+        <li>
+          Volume 24h:
+          <b>{{ response.volume * response.weightedAvgPrice | currency:'USD':'symbol-narrow':'.2-2' }}</b>
+        </li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="toggleAlarmsCard()">{{ !showAlarmsCard ? 'Manage alarms' :  'Hide alarms'}}</button>
+      <button mat-stroked-button color="warn" (click)="deletePair()">Remove pair from watchlist</button>
+    </mat-card-actions>
+    <ng-container *ngIf="response.volume > 0">
+    Time span: from <b>{{ response.openTime | date: "short" }}</b> to
+    <b>{{ response.closeTime | date: "short" }}</b>
+  </ng-container>
+  </mat-card>
+  <!-- <mat-table [dataSource]="responseArray" class="mat-elevation-z8">
+    <ng-container matColumnDef="key">
+      <mat-header-cell mat-header-cell *matHeaderCellDef> Key </mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let elemento"> {{elemento.key}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="value">
+        <mat-header-cell mat-header-cell *matHeaderCellDef> Value </mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let elemento"> {{elemento.value}} </mat-cell>
+      </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table> -->
+</ng-container>
+<ng-template #spinner>
+  <mat-spinner class="spinner" *ngIf="!empty"></mat-spinner>
+</ng-template>
+<app-alarms-card *ngIf="showAlarmsCard"></app-alarms-card>

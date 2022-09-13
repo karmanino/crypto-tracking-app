@@ -1,0 +1,133 @@
+{
+  "configVersion": 1,
+  "timestamp": 1663038120016,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/index.html",
+        "/main.1068d0122b9365b0.js",
+        "/manifest.webmanifest",
+        "/polyfills.b1c9a97f7c35a734.js",
+        "/runtime.ee46972ab44cf434.js",
+        "/styles.77f53aadcf66bd2b.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/favicon/android-icon-144x144.png",
+        "/assets/favicon/android-icon-192x192.png",
+        "/assets/favicon/android-icon-36x36.png",
+        "/assets/favicon/android-icon-48x48.png",
+        "/assets/favicon/android-icon-72x72.png",
+        "/assets/favicon/android-icon-96x96.png",
+        "/assets/favicon/apple-icon-114x114.png",
+        "/assets/favicon/apple-icon-120x120.png",
+        "/assets/favicon/apple-icon-144x144.png",
+        "/assets/favicon/apple-icon-152x152.png",
+        "/assets/favicon/apple-icon-180x180.png",
+        "/assets/favicon/apple-icon-57x57.png",
+        "/assets/favicon/apple-icon-60x60.png",
+        "/assets/favicon/apple-icon-72x72.png",
+        "/assets/favicon/apple-icon-76x76.png",
+        "/assets/favicon/apple-icon-precomposed.png",
+        "/assets/favicon/apple-icon.png",
+        "/assets/favicon/browserconfig.xml",
+        "/assets/favicon/favicon-16x16.png",
+        "/assets/favicon/favicon-32x32.png",
+        "/assets/favicon/favicon-96x96.png",
+        "/assets/favicon/favicon.ico",
+        "/assets/favicon/manifest.json",
+        "/assets/favicon/ms-icon-144x144.png",
+        "/assets/favicon/ms-icon-150x150.png",
+        "/assets/favicon/ms-icon-310x310.png",
+        "/assets/favicon/ms-icon-70x70.png",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/favicon/android-icon-144x144.png": "9c07f74d38c391f5150846f274d8a3ea41ddeb6e",
+    "/assets/favicon/android-icon-192x192.png": "d5f1aa9f91e00f4b0d9ff14d43796482aa3d9075",
+    "/assets/favicon/android-icon-36x36.png": "abe549fb1812152b8037ea569e3e67a4771df194",
+    "/assets/favicon/android-icon-48x48.png": "99bc9e8a78034359af9213bc0af364c37aba2b56",
+    "/assets/favicon/android-icon-72x72.png": "ed8659e16f1ccb96d1d09fed7b9c7041eaf289df",
+    "/assets/favicon/android-icon-96x96.png": "d263c9de7390fe044d978833d49819f7d5ef5731",
+    "/assets/favicon/apple-icon-114x114.png": "0c798969f9cb8e844f45d9b9e7f4e2e97bde2715",
+    "/assets/favicon/apple-icon-120x120.png": "32b8e9a6afab047c8f90047bdcd9398233a9a40c",
+    "/assets/favicon/apple-icon-144x144.png": "e11caadb80cbc20ec20c05848f795dd7ba86d3d0",
+    "/assets/favicon/apple-icon-152x152.png": "0456da142cf9748e2cc7b61565421f9feeca5992",
+    "/assets/favicon/apple-icon-180x180.png": "779b5d52148a103b73f7559038010cf0fc1cd857",
+    "/assets/favicon/apple-icon-57x57.png": "f0f15991948730fcde30aa404dcfd44a9e74b3da",
+    "/assets/favicon/apple-icon-60x60.png": "40ba025a143f71561e7258dde23831c244ef5561",
+    "/assets/favicon/apple-icon-72x72.png": "809046c5447ef4a7b2ac05361c55ad2497ad5d8b",
+    "/assets/favicon/apple-icon-76x76.png": "3c4604daf92a721c32fd6d2eb377efc3a61846b7",
+    "/assets/favicon/apple-icon-precomposed.png": "f24a8cb8819dff14b1edec33f61d7a1f3edcffba",
+    "/assets/favicon/apple-icon.png": "f24a8cb8819dff14b1edec33f61d7a1f3edcffba",
+    "/assets/favicon/browserconfig.xml": "853389b6c4273965899eb1302d665eb91395fd0c",
+    "/assets/favicon/favicon-16x16.png": "5e12192bcc03aec24bb00906709bf9c819dde471",
+    "/assets/favicon/favicon-32x32.png": "cad9040962338f23ad6e0d1fb781a23b8e31b878",
+    "/assets/favicon/favicon-96x96.png": "740cc6d018b3ca12f0814912328f4606c76af95c",
+    "/assets/favicon/favicon.ico": "ffd9c375a188f154ce6bc653aad8eafa6d94f174",
+    "/assets/favicon/manifest.json": "d11febf9e708a9e11baee37ed7dc5e99902580be",
+    "/assets/favicon/ms-icon-144x144.png": "e11caadb80cbc20ec20c05848f795dd7ba86d3d0",
+    "/assets/favicon/ms-icon-150x150.png": "8a00bca4622312f324df0db345f1487005c11e5a",
+    "/assets/favicon/ms-icon-310x310.png": "b2f3ade5c86f5f16e428394f239a0591defcf9e9",
+    "/assets/favicon/ms-icon-70x70.png": "8e1a1ba5a03aec479f330d20f027121f3ac511c1",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/index.html": "d82279df7f4b270e521857c4bc58aab275548a16",
+    "/main.1068d0122b9365b0.js": "4831ac02bd594b9f61e6223fc70dcd7ede4197da",
+    "/manifest.webmanifest": "63eee995b13f5c671b31127d2166d50f84089298",
+    "/polyfills.b1c9a97f7c35a734.js": "17bc66268bf847f1a5181d880e62cff68b3b45b4",
+    "/runtime.ee46972ab44cf434.js": "1d67ded138f0a436da8b46074bb52a82d87319e5",
+    "/styles.77f53aadcf66bd2b.css": "1b2ae8681deaef77b56cc235d75011a894f6de6a"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

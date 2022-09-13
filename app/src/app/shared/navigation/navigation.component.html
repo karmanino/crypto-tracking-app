@@ -1,0 +1,43 @@
+<mat-sidenav-container class="sidenav-container background-override" >
+  <mat-sidenav #drawer color="primary" class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar style="margin-top: 20px"><mat-icon>waterfall_chart</mat-icon>CryptoTracker</mat-toolbar>
+    <mat-nav-list>
+      <app-statusbar></app-statusbar>
+      <a mat-list-item routerLink="./p2p">
+        <mat-icon>
+          currency_exchange
+        </mat-icon>
+        P2P Watcher<small class="beta">beta</small>
+      </a>  
+      <a mat-list-item routerLink="./crypto">
+        <mat-icon>currency_bitcoin</mat-icon>Cryptocurrencies<small class="dev">dev</small>
+      </a>
+<!--     <a mat-list-item routerLink="./login">        <mat-icon>
+        login
+      </mat-icon>Login</a>-->
+
+      <!-- <a mat-list-item routerLink="./alarms">
+        <mat-icon>
+          circle_notifications
+        </mat-icon>
+        Manage alarms
+      </a>
+      <a mat-list-item routerLink="./about">
+        <mat-icon>
+          info
+        </mat-icon>
+        About
+      </a> -->
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" *ngIf="isHandset$ | async" color="black">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>  
+</mat-sidenav-container>

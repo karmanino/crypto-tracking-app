@@ -1,0 +1,12 @@
+<div id="main">
+    BINANCE CRYPTO
+    <h1><b>Watchlist</b><button mat-mini-fab color="primary" aria-label="Add trading pair" (click)="openDialog()" class="addPairBtn">
+        <mat-icon>add</mat-icon>
+      </button></h1>
+    <hr/>
+    <div id="cryptoList">
+        <button mat-raised-button color="primary" *ngFor='let pair of tradingPairs' (click)="changeTicker(pair)">{{pair | removeUSDT}}</button>
+    </div>
+    <hr/>
+    <app-ticker-info [ticker]="ticker"></app-ticker-info>
+</div>  

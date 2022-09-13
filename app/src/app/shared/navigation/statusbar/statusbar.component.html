@@ -1,0 +1,26 @@
+<ng-container [ngSwitch]="status">
+    <ng-container *ngSwitchCase="0">
+        <a mat-list-item style="background: red" (click)="getSubscription()">
+            <mat-icon>
+                notification_important
+            </mat-icon>
+            <small>Status: Unsubscribed</small>
+        </a>
+    </ng-container>
+    <ng-container *ngSwitchCase="1">
+        <a mat-list-item style="background: green" (click)="registeredModal()">
+            <mat-icon>
+                notifications_active
+            </mat-icon>
+            <small>Status: Subscribed</small>
+        </a>
+    </ng-container>
+    <ng-container *ngSwitchCase="2">
+        <a mat-list-item style="background: darkgray" (click)="pendingModal()">
+            <mat-icon>
+                pending
+            </mat-icon>
+            <small>Status: Subscribing...</small>
+        </a>
+    </ng-container>
+</ng-container>

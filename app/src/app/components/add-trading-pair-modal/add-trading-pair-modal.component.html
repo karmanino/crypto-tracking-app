@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Add trading pair</h1>
+<div mat-dialog-content>
+  <p>Only USDT pairs are listed</p>
+  <form class="tickerForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Trading pair</mat-label>
+    <input type="text"
+           placeholder="Choose pair"
+           aria-label="Trading pair"
+           matInput
+           [formControl]="formControl"
+           [matAutocomplete]="auto">
+  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{option}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+</form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="formControl.value" cdkFocusInitial>Add</button>
+</div>

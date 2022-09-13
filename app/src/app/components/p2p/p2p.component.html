@@ -1,0 +1,13 @@
+<div id="main">
+    BINANCE P2P
+    <h1><b>Watchlist</b><!--<button mat-mini-fab color="primary" aria-label="Add P2P pair" (click)="openDialog()" class="addPairBtn">
+        <mat-icon>add</mat-icon>
+      </button>--></h1>
+    <hr/>
+    <div id="cryptoList">
+        <button mat-raised-button color="primary" *ngFor='let pair of p2pTradingPairs' (click)="changeTicker(pair)">{{pair}}</button>
+    </div>
+    <hr/>
+    <app-pair-info [pair]="ticker"></app-pair-info>
+</div>  
+

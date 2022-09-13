@@ -1,0 +1,20 @@
+<mat-card class="alarms-card" color="secondary">
+  <mat-card-title>Manage alarms</mat-card-title>
+  <mat-card-subtitle>Pair BTCUSDT</mat-card-subtitle>
+  <mat-card-content>
+    <ul>
+      <li>
+        Alarm #1: When <b>Price</b> reaches <b>$34,000.00</b>
+      </li>
+      <li>        Alarm #2: When <b>24h Price change</b> reaches <b>-/+5%</b></li>
+      <li>        Alarm #2: When <b>24h Volume</b> exceeds <b>$2,000,000,00.00</b></li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="secondary" matBadge="X" matBadgeColor="accent" [matBadgeHidden]="hidden" (mouseenter)="toggleBadgeVisibility()" (mouseleave)="toggleBadgeVisibility()">Add alarm</button>
+    <button mat-stroked-button color="accent" matBadge="X" matBadgeColor="warn" [matBadgeHidden]="hidden" (mouseenter)="toggleBadgeVisibility()" (mouseleave)="toggleBadgeVisibility()">Remove all</button>
+
+    Time span: from <b> Price change 24h:</b> to
+    <b> Price change 24h:</b>
+  </mat-card-actions>
+</mat-card>

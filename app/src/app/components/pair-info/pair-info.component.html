@@ -1,0 +1,70 @@
+<ng-container *ngIf="response.minPrice; else spinner">
+  <mat-card class="example-card">
+    <mat-card-title>{{ _ticker }}</mat-card-title>
+    <mat-card-subtitle>{{ response.minPrice | currency:'USD':'symbol-narrow':'.2-6' }} | {{ response.weighedPrice |
+      currency:'USD':'symbol-narrow':'.2-6' }} | {{ response.maxPrice | currency:'USD':'symbol-narrow':'.2-6' }}
+    </mat-card-subtitle>
+    <mat-card-content>
+      <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"
+        class="mat-elevation-z8">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef sortActionDescription="Sort by number">
+            #
+          </th>
+          <td mat-cell *matCellDef="let ad"> {{ad[0]+1}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef sortActionDescription="Sort by price">
+            Price
+          </th>
+          <td mat-cell *matCellDef="let ad"> {{ad[1] | currency}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef sortActionDescription="Sort by amount">
+            Quantity
+          </th>
+          <td mat-cell *matCellDef="let ad"> {{ad[2]| currency}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="methods">
+          <th mat-header-cell *matHeaderCellDef sortActionDescription="Sort by payment methods">
+            Payment methods
+          </th>
+          <td mat-cell *matCellDef="let ad"><span *ngFor="let method of ad[3]">{{method[1]}}<br/></span></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+    </mat-card-content>
+    <!-- <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="toggleAlarmsCard()">{{ !showAlarmsCard ? 'Manage alarms' :
+        'Hide alarms'}}</button>
+      <button mat-stroked-button color="warn" (click)="deletePair()">Remove pair from watchlist</button>
+    </mat-card-actions> -->
+  </mat-card>
+  <!-- <mat-table [dataSource]="responseArray" class="mat-elevation-z8">
+      <ng-container matColumnDef="key">
+        <mat-header-cell mat-header-cell *matHeaderCellDef> Key </mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let elemento"> {{elemento.key}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="value">
+          <mat-header-cell mat-header-cell *matHeaderCellDef> Value </mat-header-cell>
+          <mat-cell mat-cell *matCellDef="let elemento"> {{elemento.value}} </mat-cell>
+        </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table> -->
+</ng-container>
+<ng-template #spinner>
+  <mat-spinner class="spinner" *ngIf="!empty"></mat-spinner>
+</ng-template>
+<app-alarms-card *ngIf="showAlarmsCard"></app-alarms-card>
