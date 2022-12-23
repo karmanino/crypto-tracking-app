@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  endpoint: 'https://crypto-p2p-tracker.herokuapp.com'
+  endpoint: 'https://render-test-ws.onrender.com/'
 };
